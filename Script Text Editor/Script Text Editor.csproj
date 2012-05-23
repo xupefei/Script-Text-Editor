@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8078F0A-E284-4BB2-B28F-C8220596FAC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Script_Text_Editor</RootNamespace>
+    <AssemblyName>Script Text Editor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.2.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\DataGridViewEx.cs" />
+    <Compile Include="Controls\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\SavedTranslationFormatProvider.cs" />
+    <Compile Include="Data\TextData.cs" />
+    <Compile Include="FormBatchInputOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBatchInputOutput.Designer.cs">
+      <DependentUpon>FormBatchInputOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReplace.Designer.cs">
+      <DependentUpon>FormReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextLibrary\DynamicCodeWrapper.cs" />
+    <Compile Include="TextLibrary\ITextLibrary.cs" />
+    <Compile Include="TextLibrary\LibraryLinker.cs" />
+    <Compile Include="TextLibrary\NetWrapper.cs" />
+    <Compile Include="TextLibrary\PureTextWrapper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="FormBatchInputOutput.resx">
+      <DependentUpon>FormBatchInputOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReplace.resx">
+      <DependentUpon>FormReplace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileSaveAs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileContinue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindDialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeaderFooterNextSection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailMergeGoToPreviousRecord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeaderFooterPositionHeaderFromTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailMergeGoToNextRecord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InkDeleteAllInk_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InkEraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InkBallpointPen_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FilePrepareMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdvancedFileProperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoSum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplyPercentageFormat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProposeNewTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeaderFooterCurrentTimeInsert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartTimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileProperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_lptbn322ZC1qeppa2o1_500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Script_Text_Editor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LibraryType" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="OnEnterGotoNext" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ScriptPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Scripts</Value>
+    </Setting>
+    <Setting Name="SavedPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SavedTranslations</Value>
+    </Setting>
+    <Setting Name="NewScriptPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NewScripts</Value>
+    </Setting>
+    <Setting Name="AutoSavePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Autosaves</Value>
+    </Setting>
+    <Setting Name="LibraryPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Library_Text.dll</Value>
+    </Setting>
+    <Setting Name="WindowLocation" Type="System.Drawing.Point" Scope="Application">
+      <Value Profile="(Default)">300, 200</Value>
+    </Setting>
+    <Setting Name="WindowSize" Type="System.Drawing.Size" Scope="Application">
+      <Value Profile="(Default)">604, 449</Value>
+    </Setting>
+    <Setting Name="AutoSaveDuration" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="BackgroundImage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ListColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="TextBoxColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ListFont" Type="System.Drawing.Font" Scope="Application">
+      <Value Profile="(Default)">微软雅黑, 10.5pt</Value>
+    </Setting>
+    <Setting Name="TextBoxFontOrg" Type="System.Drawing.Font" Scope="Application">
+      <Value Profile="(Default)">Meiryo, 10.5pt</Value>
+    </Setting>
+    <Setting Name="TextBoxFontNew" Type="System.Drawing.Font" Scope="Application">
+      <Value Profile="(Default)">微软雅黑, 10.5pt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
