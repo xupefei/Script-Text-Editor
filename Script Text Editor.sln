@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Script Text Editor", "Script Text Editor\Script Text Editor.csproj", "{B8078F0A-E284-4BB2-B28F-C8220596FAC0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9AF4F76A-0BE6-4B8E-81CD-067AAE31E86F}"
+	ProjectSection(SolutionItems) = preProject
+		README.TXT = README.TXT
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
