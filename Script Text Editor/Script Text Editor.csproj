@@ -58,27 +58,19 @@
     </Compile>
     <Compile Include="Data\SavedTranslationFormatProvider.cs" />
     <Compile Include="Data\TextData.cs" />
-    <Compile Include="FormBatchInputOutput.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormBatchInputOutput.cs" />
     <Compile Include="FormBatchInputOutput.Designer.cs">
       <DependentUpon>FormBatchInputOutput.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormMain.cs" />
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReplace.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormReplace.cs" />
     <Compile Include="FormReplace.Designer.cs">
       <DependentUpon>FormReplace.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormSettings.cs" />
     <Compile Include="FormSettings.Designer.cs">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>

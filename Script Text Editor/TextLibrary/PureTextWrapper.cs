@@ -18,6 +18,7 @@ namespace Script_Text_Editor.TextLibrary
 
         // Fields
         private const string CRLFTranslation = @"\r\n";
+
         private const int DefaultEncoding = 2;
         private const int IsAllowCRLF = 0;
         private const string LibraryInfo = "Text Editor";
@@ -77,6 +78,8 @@ namespace Script_Text_Editor.TextLibrary
             {
                 byte[] b = Encoding.Default.GetBytes(s);
                 ms.Write(b, 0, b.Length);
+                ms.WriteByte((byte)'\r');
+                ms.WriteByte((byte)'\n');
             }
 
             return ms.ToArray();
