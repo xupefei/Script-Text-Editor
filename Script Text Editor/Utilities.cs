@@ -53,9 +53,9 @@ namespace Script_Text_Editor
             if (strInput.Length < 1)
                 return new[] { 0, 0 };
 
-            int start = strInput[0] == '　' ? 0 : strInput.IndexOfAny(new[] { '「', '『', '【' }, 0);
+            int start = strInput[0] == '　' ? 0 : strInput.IndexOfAny(new[] { '「', '『'}, 0);
 
-            int end = strInput.LastIndexOfAny(new[] { '」', '』', '】' }, strInput.Length - 1);
+            int end = strInput.LastIndexOfAny(new[] { '」', '』'}, strInput.Length - 1);
 
             if (start == -1 && end != -1)
                 return new[] { 0, end };

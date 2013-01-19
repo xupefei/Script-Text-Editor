@@ -26,11 +26,13 @@ namespace Script_Text_Editor.Data
         private bool _isOpened;
         private string _filename;
         private Stack<LineInfo> _stackRedo = new Stack<LineInfo>(50);
-        private DataTable _dtTexts = new DataTable();
+        private DataTable _dtTexts;
         private LibraryLinker _library = new LibraryLinker();
 
         internal TextData()
         {
+            _dtTexts = new DataTable();
+
             _dtTexts.Columns.Add("Line_Number");
             _dtTexts.Columns.Add("Org_Text");
             _dtTexts.Columns.Add("New_Text");
@@ -63,7 +65,6 @@ namespace Script_Text_Editor.Data
             _dtTexts.Rows.Clear();
             _stackRedo.Clear();
 
-            _filename = filename;
 
             try
             {
@@ -91,9 +92,11 @@ namespace Script_Text_Editor.Data
             catch (Exception ex)
             {
                 KryptonMessageBox.Show(ex.Message);
+                _filename = "";
             }
 
             _isOpened = _dtTexts.Rows.Count > 0;
+            _filename = filename;
         }
 
         internal void BuildScript(string filename)
